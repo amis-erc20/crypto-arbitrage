@@ -21,7 +21,7 @@ const io7server = new IO({
 });
 app.use(staticServe('./frontend'));
 const port = process.env.PORT || 8002;
-const host = 'localhost';
+const host = 'wow.such.ninja';
 app.use(koahelmet());
 io7server.start(io_server, options);
 io_server.listen(port, host, function () {
@@ -108,8 +108,10 @@ function computePrices(data) {
                             [
                                 coin,
                                 arr[i][0] / arr[j][0],
-                                arr[i][0], arr[j][0],
-                                arr[i][1], arr[j][1]
+                                arr[i][0],
+				arr[j][0],
+                                arr[i][1],
+				arr[j][1]
                             ],
                             [
                                 coin,
@@ -142,7 +144,7 @@ function computePrices(data) {
     }
     console.log("======> new ===>", numberOfRequests);
     arrayOfRequests.map(e => e.catch(e => e));
-    setTimeout(main, 10000);
+    setTimeout(main, 45000);
 })();
 
 if (util.launchUI()) {

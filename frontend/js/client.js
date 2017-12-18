@@ -9,10 +9,21 @@ const checkedMarkets = {
         bittrex: true,
         anxpro: true,
         ccex: true,
-        gatecoin: true,
-        poloniex: true,
-        zb: true,
-        bitfinex: true
+        bitfinex: true,
+	bluetrade: true,
+	binance: true,
+	bitbay: true,
+	bitso: true,
+	cex: true,
+	coinfloor: true,
+	gdax: true,
+	gateio: true,
+	gemini: true,
+	itbit: true,
+	cryptopia: true,
+	bitstamp: true,
+	vaultoro: true,
+	therock: true
     },
     checkedCoins = {
         showAll: true,
@@ -107,7 +118,7 @@ $(function () {
     new WOW().init();
     $('.loader').hide();
     $('#header').show();
-    let socket = io('//localhost:8002');
+    let socket = io('//wow.such.ninja:8002');
     //let socket = io();
 
     let numberOfLoads = 0; //Number of final results loads
@@ -194,8 +205,8 @@ $(function () {
             if (allowedData(lowMarket, highMarket, coinName)) {
                 for (let j = data.length - 1; j >= 0; j--) {
                     if (
-                        data[j][4] === highMarket //equal ...
-                        && data[j][5] === lowMarket // to opposite market
+                        data[j][5] === highMarket //equal ...
+                        && data[j][4] === lowMarket // to opposite market
                         && data[i][0] !== data[j][0] //and isnt the same coin as pair
                         && data[j][0] !== 'BTC' //and isnt BTC
                         && checkedCoins[data[j][0]] //and isnt remove
@@ -218,9 +229,9 @@ $(function () {
                             coin: data[pairIndex][0],
                             diff: ((data[pairIndex][1] - 1) * 100).toFixed(2),
                             market2price: (data[pairIndex][2] * 1000).toPrecision(3),
-                            market2: data[pairIndex][5],
+                            market2: data[pairIndex][4],
                             market1price: (data[pairIndex][3] * 1000).toPrecision(3),
-                            market1: data[pairIndex][4],
+                            market1: data[pairIndex][5],
                         },
                         totalDiff: (((data[i][1] - 1) * 100) + ((data[pairIndex][1] - 1) * 100)).toFixed(2)
                     };
