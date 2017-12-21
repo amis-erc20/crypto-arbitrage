@@ -71,8 +71,8 @@ async function getMarketData(exchange_obj, coin_prices) {
             const one_over = pair[0] === ex_settlement_symbol;
             if (!coin_prices[coinName]) coin_prices[coinName] = {};
             let last = ticker['last'];
-            let vol = ticker['baseVolume'];
-            if (vol > 10) {
+            let vol = ticker['quoteVolume'];
+            if (vol > 5) {
                 coin_prices[coinName][exchange_obj.id] = one_over ? 1 / last : last;
                 if (exchange_obj.id.indexOf(bug_fix) > -1) {
                     console.log(tradingPair, last);
