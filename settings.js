@@ -53,6 +53,7 @@ module.exports = {
             new t.gemini({verbose: false}),
 //            new t.getbtc({verbose: false}),
 //            new t.huobipro({verbose: false}),
+	    new t.hitbtc2({verbose: false}),
             new t.itbit({verbose: false}),
 //            new t.kucoin({verbose: false}),
 //            new t.kuna({verbose: false}),

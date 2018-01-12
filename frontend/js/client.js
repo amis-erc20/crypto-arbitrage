@@ -16,6 +16,7 @@ const checkedMarkets = {
 	coinfloor: true,
 	gdax: true,
 	gemini: true,
+	hitbtc2: true,
 	itbit: true,
 	bitstamp: true,
 	vaultoro: true,
