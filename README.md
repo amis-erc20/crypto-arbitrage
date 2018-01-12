@@ -3,7 +3,7 @@
 # Crypto Arbitrage - a node.js script to help find and act on arbitrage opportunities. 
 A cryptocurrency arbitrage opportunity calculator and trading bot. Over 800 currencies and 50 markets.
 
-To use, go to https://manu354.github.io/cryptocurrency-arbitrage/ , for development install nodejs ^V8.00 and run `npm install` in the folder where the script `main.js` is. To run the program write `node main` or `npm start`. To change market settings, and to add your own markets edit the `settings.js` file.
+For development install nodejs ^V8.00 and run `npm install` in the folder where the script `main.js` is. To run the program write `node main` or `npm start`. To change market settings, and to add your own markets edit the `settings.js` file.
 
 ## Short term **roadmap** 
 
@@ -82,16 +82,6 @@ Currently you will have to add a market object with the correct settings in the 
 You can temporarily stop loading a market from the frontend, or remove the market by deleting the object in `settings.js`
 
 For more information see the [wiki](https://github.com/manu354/arbitrage/wiki/How-to-add-a-market) on adding markets.
-
-## Built and deployed with
-
-* [Node.JS](https://nodejs.org) - For the backend
-* [Azure](http://ccarbitrage.azurewebsites.net/) - hosts the backend (directly from this github repo)
-* [Github Pages](https://manu354.github.io/cryptocurrency-arbitrage/) - hosts the beautiful frontend :) (gets data from hosted node instance on azure)
-
-## Contributing
-
-Feel free to suggest edits / pull requests or email me at manummasson8@gmail.com
 
 ## Authors
 
