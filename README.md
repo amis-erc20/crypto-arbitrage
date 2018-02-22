@@ -86,6 +86,7 @@ For more information see the [wiki](https://github.com/manu354/arbitrage/wiki/Ho
 ## Authors
 
 * **Manu Masson** - *Initial work* 
+* **Matthew Hall** - *Continuing work*
 
 ## License
 

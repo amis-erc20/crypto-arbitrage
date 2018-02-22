@@ -30,6 +30,7 @@ module.exports = {
 //            new t.bitlish({verbose: false}),
 //            new t.bitmarket({verbose: false}),
             new t.bitso({verbose: false}),
+	    new t.bitstamp({verbose: false}),
 //            new t.btcbox({verbose: false}),
 //            new t.btcchina({verbose: false}),
 //            new t.btcexchange({verbose: false}),
@@ -60,7 +61,7 @@ module.exports = {
 //            new t.lakebtc({verbose: false}),
 //            new t.mixcoins({verbose: false}),
             new t.okex({verbose: false}),
-            new t.quoine({verbose: false}),
+//            new t.quoine({verbose: false}),
             new t.yunbi({verbose: false}),
 //            new t.zb({verbose: false}),
             new t.cryptopia({verbose: false}),
@@ -69,15 +70,15 @@ module.exports = {
 //            new t.bitflyer({verbose: false}),
 //            new t.tidex({verbose: false}),
             new t.bitmex({verbose: false}),
-            new t.bitstamp({verbose: false}),
 //            new t.zaif({verbose: false}),
 //            new t.vbtc({verbose: false}),
 //            new t.exmo({verbose: false}),
 //            new t.southxchange({verbose: false}),
 //            new t.urdubit({verbose: false}),
             new t.vaultoro({verbose: false}),
-            new t.therock({verbose: false}),
+//            new t.therock({verbose: false}),
             new t.bitfinex2({verbose: false}),
+	    new t.liqui({verbose: false})
         ];
 
     }

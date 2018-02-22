@@ -20,8 +20,8 @@ const checkedMarkets = {
 	itbit: true,
 	bitstamp: true,
 	vaultoro: true,
-	therock: true,
-	bitmex: true
+	bitmex: true,
+	liqui: true
     },
     checkedCoins = {
         showAll: true,
