@@ -61,7 +61,7 @@ module.exports = {
 //            new t.lakebtc({verbose: false}),
 //            new t.mixcoins({verbose: false}),
             new t.okex({verbose: false}),
-//            new t.quoine({verbose: false}),
+            new t.quoinex({verbose: false}),
             new t.yunbi({verbose: false}),
 //            new t.zb({verbose: false}),
             new t.cryptopia({verbose: false}),
@@ -78,6 +78,13 @@ module.exports = {
             new t.vaultoro({verbose: false}),
 //            new t.therock({verbose: false}),
             new t.bitfinex2({verbose: false}),
+	    new t.bitz({verbose: false}),
+	    new t.zb({verbose: false}),
+      	    new t.qryptos({verbose: false}),
+ 	    new t.coinegg({verbose: false}),
+	    new t.cobinhood({verbose: false}),
+	    new t.bibox({verbose: false}),
+	    new t.coolcoin({verbose: false}),
 	    new t.liqui({verbose: false})
         ];
 

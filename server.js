@@ -62,29 +62,33 @@ async function getMarketData(exchange_obj, coin_prices) {
     await exchange_obj.loadMarkets();
     const ex_settlement_symbol = "BTC";
     for (let tradingPair in exchange_obj.markets) {
+	//if (exchange_obj.id == 'bibox') {
+	//console.log("exchange: ", exchange_obj.id, ", pair: ", tradingPair);	    
+	//}
         const pair = tradingPair.split("/");
         if (pair[0] === ex_settlement_symbol || pair[1] === ex_settlement_symbol) {
-            //console.log("for loop", coinName);
             let ticker = await exchange_obj.fetchTicker(tradingPair);
-            // console.log("show coin name", coinNamePair);
             const coinName = pair[0] === ex_settlement_symbol ? pair[1] : pair[0];
             const one_over = pair[0] === ex_settlement_symbol;
             if (!coin_prices[coinName]) coin_prices[coinName] = {};
             let last = ticker['last'];
             let vol = ticker['quoteVolume'];
-            if (vol > 5) {
+	  //  if (exchange_obj.id == 'bibox') {
+	  //	    console.log("exchange: ", exchange_obj.id, ", pair: ", tradingPair, ", last: ",last, " vol: ", vol );  
+		    
+	  //  }
+
+          //  if (vol > 5) {
                 coin_prices[coinName][exchange_obj.id] = one_over ? 1 / last : last;
                 if (exchange_obj.id.indexOf(bug_fix) > -1) {
                     console.log(tradingPair, last);
                     coin_prices[coinName][exchange_obj.id] = last;
                 }
 
-
-                //console.log("for_loop", exchange_obj.id);
-                //console.log("num_request", numberOfRequests);
+              //  console.log("num_request", numberOfRequests);
                 numberOfRequests++;
                 if (numberOfRequests >= 1) computePrices(coin_prices);
-            }
+           // }
         }
     }
 }
