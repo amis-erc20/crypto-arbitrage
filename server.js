@@ -78,7 +78,7 @@ async function getMarketData(exchange_obj, coin_prices) {
 		    
 	  //  }
 
-          //  if (vol > 5) {
+            if (last > 0) {
                 coin_prices[coinName][exchange_obj.id] = one_over ? 1 / last : last;
                 if (exchange_obj.id.indexOf(bug_fix) > -1) {
                     console.log(tradingPair, last);
@@ -88,7 +88,7 @@ async function getMarketData(exchange_obj, coin_prices) {
               //  console.log("num_request", numberOfRequests);
                 numberOfRequests++;
                 if (numberOfRequests >= 1) computePrices(coin_prices);
-           // }
+            }
         }
     }
 }
