@@ -74,11 +74,11 @@ async function getMarketData(exchange_obj, coin_prices) {
             let last = ticker['last'];
             let vol = ticker['quoteVolume'];
 	  //  if (exchange_obj.id == 'bibox') {
-	  //	    console.log("exchange: ", exchange_obj.id, ", pair: ", tradingPair, ", last: ",last, " vol: ", vol );  
-		    
+	  //	    console.log("exchange: ", exchange_obj.id, ", pair: ", tradingPair, ", last: ",last, " vol: ", vol );    
 	  //  }
-
-            if (last > 0) {
+	    
+            if ((last > 0) && ((vol > 5) || (typeof vol == 'undefined'))) {
+		//console.log("exchange: ", exchange_obj.id, ", pair: ", tradingPair, ", last: ",last, " vol: ", vol );  
                 coin_prices[coinName][exchange_obj.id] = one_over ? 1 / last : last;
                 if (exchange_obj.id.indexOf(bug_fix) > -1) {
                     console.log(tradingPair, last);
